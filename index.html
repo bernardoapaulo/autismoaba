@@ -1,19 +1,12 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1011160671959026');
-fbq('track', 'PageView');
-</script>
+<!-- PRELOAD DE RECURSOS CRÍTICOS PARA O LCP -->
+<link rel="preload" href="fonts/cabinet-grotesk-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/satoshi-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/1.webp" as="image" fetchpriority="high">
+
+<!-- Meta Pixel Code (carregamento adiado para depois do load da página, ver script no fim do body) -->
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1011160671959026&ev=PageView&noscript=1"
 /></noscript>
@@ -80,6 +73,7 @@ src="https://www.facebook.com/tr?id=1011160671959026&ev=PageView&noscript=1"
     --bg-base: #eef2f2;
     --dark-block: #10474d;
     --accent: #ef7a5d;
+    --accent-dark: #a8431f;
     --neutral-soft: #cfe0df;
     --charcoal: #171e19;
     --white: #ffffff;
@@ -279,7 +273,7 @@ src="https://www.facebook.com/tr?id=1011160671959026&ev=PageView&noscript=1"
   }
 
   .hero h1 .accent-word {
-    color: var(--accent);
+    color: var(--accent-dark);
   }
 
   @media (max-width: 500px) {
@@ -476,7 +470,7 @@ src="https://www.facebook.com/tr?id=1011160671959026&ev=PageView&noscript=1"
     font-style: normal;
     font-size: 3.5rem;
     line-height: 1;
-    color: var(--accent);
+    color: var(--accent-dark);
     margin-bottom: -10px;
   }
 
@@ -732,22 +726,9 @@ src="https://www.facebook.com/tr?id=1011160671959026&ev=PageView&noscript=1"
     border-radius: 50%;
     background: #e0e0e0;
     border: 1px solid #bbb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-heading);
-    font-weight: 800;
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 14px;
-    overflow: hidden;
-  }
-
-  .testimonial-avatar img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
     object-fit: cover;
+    display: block;
+    margin-bottom: 14px;
   }
 
   .authority-photo {
@@ -1284,7 +1265,7 @@ src="https://www.facebook.com/tr?id=1011160671959026&ev=PageView&noscript=1"
     <div class="testimonial-grid">
 
       <div class="testimonial-card">
-        <div class="testimonial-avatar"><img src="img/2.webp" alt="Fernanda A." width="48" height="48" loading="lazy"></div>
+        <img src="img/2.webp" alt="Fernanda A." width="48" height="48" loading="lazy" class="testimonial-avatar">
         <p>"Antes eu chegava insegura em cada primeira sessão. Depois do material, passei a ter um
         roteiro claro de anamnese e me sinto muito mais preparada."</p>
         <p class="testimonial-name">Fernanda A.</p>
@@ -1293,7 +1274,7 @@ src="https://www.facebook.com/tr?id=1011160671959026&ev=PageView&noscript=1"
       </div>
 
       <div class="testimonial-card">
-        <div class="testimonial-avatar"><img src="img/3.webp" alt="Ricardo M." width="48" height="48" loading="lazy"></div>
+        <img src="img/3.webp" alt="Ricardo M." width="48" height="48" loading="lazy" class="testimonial-avatar">
         <p>"Os templates de PEI e plano de sessão sozinhos já valeram a compra. Uso toda semana com
         meus pacientes."</p>
         <p class="testimonial-name">Ricardo M.</p>
@@ -1302,7 +1283,7 @@ src="https://www.facebook.com/tr?id=1011160671959026&ev=PageView&noscript=1"
       </div>
 
       <div class="testimonial-card">
-        <div class="testimonial-avatar"><img src="img/4.webp" alt="Camila S." width="48" height="48" loading="lazy"></div>
+        <img src="img/4.webp" alt="Camila S." width="48" height="48" loading="lazy" class="testimonial-avatar">
         <p>"Como mãe, eu não entendia metade dos termos que os profissionais usavam. Esse material me
         ajudou a entender o processo e a conversar com a equipe do meu filho com mais confiança."</p>
         <p class="testimonial-name">Camila S.</p>
@@ -1311,7 +1292,7 @@ src="https://www.facebook.com/tr?id=1011160671959026&ev=PageView&noscript=1"
       </div>
 
       <div class="testimonial-card">
-        <div class="testimonial-avatar"><img src="img/5.webp" alt="João P." width="48" height="48" loading="lazy"></div>
+        <img src="img/5.webp" alt="João P." width="48" height="48" loading="lazy" class="testimonial-avatar">
         <p>"Dá pra aplicar direto, sem enrolação. Fui direto ao conteúdo de manejo comportamental
         porque era minha maior dificuldade em sala de aula."</p>
         <p class="testimonial-name">João P.</p>
@@ -1483,6 +1464,31 @@ src="https://www.facebook.com/tr?id=1011160671959026&ev=PageView&noscript=1"
     </div>
   </div>
 </footer>
+
+<!-- META PIXEL: carregamento adiado até depois do load da página + pequeno delay, -->
+<!-- para não competir com LCP/TBT no carregamento inicial. Não remove a funcionalidade, só atrasa o disparo. -->
+<script>
+  function loadMetaPixel() {
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1011160671959026');
+    fbq('track', 'PageView');
+  }
+
+  if (document.readyState === 'complete') {
+    setTimeout(loadMetaPixel, 1500);
+  } else {
+    window.addEventListener('load', function () {
+      setTimeout(loadMetaPixel, 1500);
+    });
+  }
+</script>
 
 <!-- CONTADOR REGRESSIVO (URGÊNCIA) -->
 <script>
