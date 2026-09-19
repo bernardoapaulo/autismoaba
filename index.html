@@ -22,9 +22,59 @@ src="https://www.facebook.com/tr?id=1011160671959026&ev=PageView&noscript=1"
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Curso ABA & Autismo: Passo a Passo da Avaliação à Intervenção</title>
 <meta name="description" content="Curso completo e digital para atender crianças e adolescentes com autismo, da avaliação inicial à intervenção ABA. Acesso imediato, sem mensalidade.">
-<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,700,500,400&f[]=satoshi@700,500,400&display=swap">
 
 <style>
+  /* ===== FONTES LOCAIS (self-hosted, substitui o link externo do Fontshare) ===== */
+  @font-face {
+    font-family: 'Cabinet Grotesk';
+    src: url('fonts/cabinet-grotesk-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Cabinet Grotesk';
+    src: url('fonts/cabinet-grotesk-500.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Cabinet Grotesk';
+    src: url('fonts/cabinet-grotesk-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Cabinet Grotesk';
+    src: url('fonts/cabinet-grotesk-800.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('fonts/satoshi-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('fonts/satoshi-500.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('fonts/satoshi-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
   /* ===== DESIGN TOKENS ===== */
   :root {
     --yellow: #ffe17c;
@@ -574,7 +624,7 @@ src="https://www.facebook.com/tr?id=1011160671959026&ev=PageView&noscript=1"
   .value-stack tfoot td { font-weight: 800; border-top: 2px solid var(--black); border-bottom: none; }
 
   .price-block { text-align: center; margin: 20px 0; }
-  .price-old { text-decoration: line-through; color: #777; font-size: 1.2rem; display: block; }
+  .price-old { text-decoration: line-through; color: var(--charcoal); font-size: 1.2rem; display: block; }
   .price-new {
     font-family: var(--font-heading);
     font-size: 2.6rem;
@@ -715,7 +765,15 @@ src="https://www.facebook.com/tr?id=1011160671959026&ev=PageView&noscript=1"
     .footer-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
-  footer h4 { color: var(--white); font-size: 0.95rem; margin-bottom: 14px; }
+  .footer-heading {
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.95rem;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin: 0 0 14px;
+  }
   footer ul { list-style: none; padding: 0; margin: 0; }
   footer ul li { margin-bottom: 8px; font-size: 0.9rem; }
   footer a { text-decoration: none; }
@@ -768,6 +826,8 @@ src="https://www.facebook.com/tr?id=1011160671959026&ev=PageView&noscript=1"
     <a href="#oferta" class="btn btn-primary btn-small">Quero Acesso Imediato</a>
   </div>
 </header>
+
+<main>
 
 <!-- HERO -->
 <section class="hero dot-pattern">
@@ -869,7 +929,7 @@ src="https://www.facebook.com/tr?id=1011160671959026&ev=PageView&noscript=1"
 <section class="section" style="background:var(--sage);">
   <div class="container text-center" style="max-width:720px;margin:0 auto;">
     <h2>Um método construído a partir da prática clínica real</h2>
-    <img src="img/1.jpg" alt="Mônica Vieira" class="authority-photo">
+    <img src="img/1.webp" alt="Mônica Vieira" class="authority-photo" width="120" height="120" fetchpriority="high">
     <p class="authority-name">Mônica Vieira</p>
     <p>
       "Com mais de 12 anos de experiência na área, eu sei exatamente quais são os desafios de quem está
@@ -1125,7 +1185,7 @@ src="https://www.facebook.com/tr?id=1011160671959026&ev=PageView&noscript=1"
     <div class="testimonial-grid">
 
       <div class="testimonial-card">
-        <div class="testimonial-avatar"><img src="img/2.jpeg" alt="Fernanda A."></div>
+        <div class="testimonial-avatar"><img src="img/2.webp" alt="Fernanda A." width="48" height="48" loading="lazy"></div>
         <p>"Antes eu chegava insegura em cada primeira sessão. Depois do material, passei a ter um
         roteiro claro de anamnese e me sinto muito mais preparada."</p>
         <p class="testimonial-name">Fernanda A.</p>
@@ -1134,7 +1194,7 @@ src="https://www.facebook.com/tr?id=1011160671959026&ev=PageView&noscript=1"
       </div>
 
       <div class="testimonial-card">
-        <div class="testimonial-avatar"><img src="img/3.jpg" alt="Ricardo M."></div>
+        <div class="testimonial-avatar"><img src="img/3.webp" alt="Ricardo M." width="48" height="48" loading="lazy"></div>
         <p>"Os templates de PEI e plano de sessão sozinhos já valeram a compra. Uso toda semana com
         meus pacientes."</p>
         <p class="testimonial-name">Ricardo M.</p>
@@ -1143,7 +1203,7 @@ src="https://www.facebook.com/tr?id=1011160671959026&ev=PageView&noscript=1"
       </div>
 
       <div class="testimonial-card">
-        <div class="testimonial-avatar"><img src="img/4.jpeg" alt="Camila S."></div>
+        <div class="testimonial-avatar"><img src="img/4.webp" alt="Camila S." width="48" height="48" loading="lazy"></div>
         <p>"Como mãe, eu não entendia metade dos termos que os profissionais usavam. Esse material me
         ajudou a entender o processo e a conversar com a equipe do meu filho com mais confiança."</p>
         <p class="testimonial-name">Camila S.</p>
@@ -1152,7 +1212,7 @@ src="https://www.facebook.com/tr?id=1011160671959026&ev=PageView&noscript=1"
       </div>
 
       <div class="testimonial-card">
-        <div class="testimonial-avatar"><img src="img/5.jpg" alt="João P."></div>
+        <div class="testimonial-avatar"><img src="img/5.webp" alt="João P." width="48" height="48" loading="lazy"></div>
         <p>"Dá pra aplicar direto, sem enrolação. Fui direto ao conteúdo de manejo comportamental
         porque era minha maior dificuldade em sala de aula."</p>
         <p class="testimonial-name">João P.</p>
@@ -1279,6 +1339,8 @@ src="https://www.facebook.com/tr?id=1011160671959026&ev=PageView&noscript=1"
   </div>
 </section>
 
+</main>
+
 <!-- RODAPÉ -->
 <footer>
   <div class="container">
@@ -1291,7 +1353,7 @@ src="https://www.facebook.com/tr?id=1011160671959026&ev=PageView&noscript=1"
         <p style="font-size:0.85rem;margin-top:12px;">Curso digital para atendimento a crianças e adolescentes com autismo.</p>
       </div>
       <div>
-        <h4>Navegação</h4>
+        <p class="footer-heading">Navegação</p>
         <ul>
           <li><a href="#modulos">Módulos</a></li>
           <li><a href="#como-funciona">Como funciona</a></li>
@@ -1300,14 +1362,14 @@ src="https://www.facebook.com/tr?id=1011160671959026&ev=PageView&noscript=1"
         </ul>
       </div>
       <div>
-        <h4>Suporte</h4>
+        <p class="footer-heading">Suporte</p>
         <ul>
           <li><a href="#">Fale conosco</a></li>
           <li><a href="#">Política de reembolso</a></li>
         </ul>
       </div>
       <div>
-        <h4>Redes</h4>
+        <p class="footer-heading">Redes</p>
         <div class="social-row">
           <a href="#" class="social-icon" aria-label="Instagram">IG</a>
           <a href="#" class="social-icon" aria-label="E-mail">@</a>
